@@ -1,0 +1,37 @@
+<form [formGroup]="contactForm" class="php-email-form" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" formControlName="name" required>
+        <ng-container *ngIf="(f['name'].touched && f['name'].invalid)">
+          <span *ngIf="f['name'].hasError('required')" class="text-danger">Name is required</span>
+          <span *ngIf="f['name'].hasError('pattern')" class="text-danger">Name can contain 2-35 letters or spec. characters</span>
+        </ng-container>
+      </div>
+      <div class="col-md-6 form-group mt-3 mt-md-0">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" formControlName="email" required>
+        <ng-container *ngIf="(f['email'].touched && f['email'].invalid)">
+          <span *ngIf="f['email'].hasError('required')" class="text-danger">Email is required</span>
+          <span *ngIf="f['email'].hasError('email')" class="text-danger">Invalid email address</span>
+        </ng-container>
+      </div>
+    </div>
+    <div class="form-group mt-3">
+      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" formControlName="subject" required>
+      <ng-container *ngIf="(f['subject'].touched && f['subject'].invalid)">
+        <span *ngIf="f['subject'].hasError('required')" class="text-danger">Subject is required</span>
+        <span *ngIf="f['subject'].hasError('pattern')" class="text-danger">Subject can contain 2-30 characters</span>
+      </ng-container>
+    </div>
+    <div class="form-group mt-3">
+      <textarea class="form-control" name="message" rows="8" placeholder="Message" formControlName="message" required></textarea>
+      <ng-container *ngIf="(f['message'].touched && f['message'].invalid)">
+        <span *ngIf="f['message'].hasError('required')" class="text-danger">Message is required</span>
+        <span *ngIf="f['message'].hasError('pattern')" class="text-danger">Message can only contain letters, numbers and spec. characters</span>
+      </ng-container>
+    </div>
+    <div *ngIf="submitted" class="my-3 text-center">
+      <div class="sent-message text-success">Your message has been sent successfully</div>
+    </div>
+    <div class="text-center my-3"><button type="submit" [disabled]="contactForm.invalid">Send Message</button></div>
+    <p *ngIf="!submitted" class="text-danger text-center">All fields are required to be valid in order to send a message</p>
+</form>

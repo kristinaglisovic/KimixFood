@@ -1,0 +1,17 @@
+[
+    {
+       "id":1,
+       "title":"Over 18 years of experience",
+       "description":"We’ve all worked in different facets of the restaurant industry."
+    },
+    {
+        "id":2,
+        "title":"Satisfied Customers",
+        "description":"A satisfied customer is the best business strategy of all!"
+     },
+     {
+        "id":3,
+        "title":"Free shipping",
+        "description":"Orders of $10 or more of eligible items qualify for FREE Shipping."
+     }
+]

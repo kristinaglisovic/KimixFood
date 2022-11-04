@@ -1,0 +1,31 @@
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs box pb-5">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2 class="pt-5 zuta">Chefs</h2>
+            <p class="pb-3 zuta fw-bold">Our Proffesional Chefs</p>
+          </div>
+  
+          <div class="row">
+  
+             
+   
+  
+            <div *ngFor="let staff of Staff" class="col-lg-4 col-md-6">
+              <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                <img src="{{staff.image.path}}" class="img-fluid" alt="{{staff.image.alt}}">
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>"{{staff.fullName}}"</h4>
+                    <span>"{{staff.title}}"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Chefs Section -->
+  

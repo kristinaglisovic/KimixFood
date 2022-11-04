@@ -1,0 +1,48 @@
+    <!-- ======= Specials Section ======= -->
+    <section class="specials providnijaBraon vh-100 d-flex align-items-center" id="hrana">
+        
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2 class="text-white sasRes">Ingredients</h2>
+           
+          </div>
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-5 col-md-6 d-md-block d-sm-none sasRes" id="sas">
+              <ul class="nav nav-tabs flex-column">
+               <li class="zuta fw-bold my-2" *ngFor="let i of food.ingredients">- {{i}}</li>
+              </ul>
+            </div>
+            <div class="col-lg-7 mt-4 mt-lg-0 col-md-6  text-center" id="hrana">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3 class="pt-1">Information</h3>
+                      <p><a *ngFor="let t of food.tags" routerLink="/tag/{{t}}"><span class="tag m-1 p-1">{{t}}</span></a> </p>
+                      <p>Preparation</p>
+                      <p>🕑: {{food.cookingTime}} minutes</p>
+                      <p><span class="fa fa-fire narandzasta"></span> {{food.kcal}} Kcal</p>
+                      <div class="d-flex justify-content-around"> 
+                        <div><span  class="zuta fw-bold">{{food.price.new | currency}}</span></div>
+                        <div *ngIf='food.new' class="pull-right">
+                            <span class="bg-success text-warning badge font-weight-bold p-1">NEW</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-warning mt-2"  (click)="addToCart()">Add to cart</button>
+                  
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                        <h3 class="text-warning">{{food.name}}</h3>
+                        <img src="{{food.imageUrl}}" alt="{{food.name}}" class="img-fluid slikaa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Specials Section -->
+  

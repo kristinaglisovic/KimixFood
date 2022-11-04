@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg fixed-top braon" id="header">
+  <div class="container-fluid container-xl d-flex align-items-center">
+  <h1 class="logo text-center me-auto me-lg-0">
+    <a routerLink="/" class="zuta"><i class="fa-solid fa-home"></i>KIMIX'S FOOD</a>
+  </h1>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon zuta"></span>
+  </button>
+  <div class="d-flex d-none d-lg-block align-items-center justify-content-center">
+   <span class="fw-bold text-uppercase zuta"><i class="fa-solid fa-star"></i> The best food delivery service <i class="fa-solid fa-star"></i></span>
+   </div>
+  
+  
+  <a routerLink="/cart-page" class="korpa zuta"
+    ><i class="fa-solid fa-cart-shopping korpa"></i>({{ cart.items.length }})</a>
+  </div>
+
+</nav>

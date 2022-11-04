@@ -1,0 +1,52 @@
+#oneFood{
+    background: url("../../../assets/images/singleFood.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------
+# Specials
+--------------------------------------------------------------*/
+.specials {
+    overflow: hidden;
+  }
+  .specials .details h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .specials .details p {
+    color: #aaaaaa;
+  }
+  .specials .details p:last-child {
+    margin-bottom: 0;
+  }
+
+ 
+
+  @media (max-width: 992px) {
+    .slikaa{
+     width: 40%;
+    }
+    .specials .nav-link {
+      border: 0;
+      padding: 15px;
+    } 
+  }
+
+  @media (max-width: 768px) {
+   .sasRes{
+     display: none !important;
+   }
+  }
+  @media (max-width: 495px) {
+    #hrana{
+      padding-top: 10px;
+    }
+    .slikaa{
+      width: 100%;
+    }
+   }
+ 
+  

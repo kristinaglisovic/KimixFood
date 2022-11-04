@@ -1,0 +1,66 @@
+<section class="d-flex align-items-center justify-content-center pt-5 providnijaBraon" id="korpa">
+  <div class="container braon shadow h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
+
+        <div class="d-flex mt-1 justify-content-between align-items-center mb-2">
+          <h3 class="fw-normal mb-0 zuta">Orders</h3>
+          <hr class="text-white">
+          <div>
+            <p class="mb-0"><span class="text-muted fw-bold">Sort by: </span>
+              <button (click)="sortData()" class="btn text-muted mx-2 border">Price</button></p>
+          </div>
+        </div>
+       <p class="fw-bold mb-4 fs-4 text-white">You have {{cart.items.length}} item/s in your cart</p>
+
+        <div *ngIf="cart.items.length!=0;else drugicontent">
+        <div  *ngFor="let cartItem of cart.items | paginate: { itemsPerPage: 2, currentPage: p }" class="card rounded-3 mb-4">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src="{{cartItem.food.imageUrl}}" alt="{{cartItem.food.name}}" class="img-fluid"/>
+              </div>
+              <div class="col-md-3 col-lg-3 col-xl-3">
+                <a class="zuta" routerLink="/food/{{cartItem.food.id}}"><p class="lead fw-normal mb-2">{{cartItem.food.name}}</p></a>
+                <p><span class="fa fa-fire narandzasta"></span><span> {{cartItem.food.kcal}} Kcal</span></p>
+              </div>
+              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                <form [formGroup]="quantityFood">
+                  <input id="quantity" min="1" name="quantity" #kolicina placeholder="Change Qty"  (input)="changeQuantity(cartItem, kolicina.value)" type="number"
+                  class="form-control form-control-sm" formControlName="quantityNumber" />
+                  <div *ngIf="f.quantityNumber.errors">
+                  </div>
+                </form>
+              </div>
+              <div *ngIf="!f.quantityNumber.errors" class="col-lg-1">
+                 <span>Qty: {{ cartItem.quantity || "0"}}</span>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h5 *ngIf="!f.quantityNumber.errors;else minusQuantity"  class="mb-0">{{cartItem.price | currency }}</h5>
+                <ng-template #minusQuantity><span class="text-danger text-center">Quantity in orders must be between 1 and 500</span></ng-template>
+              </div>
+              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                <a (click)="removeFromCart(cartItem)" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+        </div>
+          </div>
+
+        <ng-template #drugicontent><p class="zuta fw-bold">Go back and order something! I know you're hungry! 😁</p></ng-template>
+        <div class="text-end zuta">
+          <p class="mb-1 fw-bold">Total Price</p>
+          <p *ngIf="!f.quantityNumber.errors" class="mb-0 fw-bold">{{cart.totalPrice | currency }} </p>
+          <div *ngIf="cart.totalPrice!=0">
+              <app-payment-form></app-payment-form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

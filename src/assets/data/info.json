@@ -1,0 +1,30 @@
+[
+    {
+       "id":1,
+       "icon":"fa-solid fa-location-dot",
+       "className":"address",
+       "header": "Location:",
+       "text":"A108 Adam Street, New York, NY 535022"
+    },
+    {
+        "id":2,
+        "icon":"fa-solid fa-clock",
+        "className":"open-hours",
+        "header": "Open Hours:",
+        "text":"Monday-Saturday: 11:00 AM - 23:00 PM"
+     },
+     {
+        "id":3,
+        "icon":"fa-solid fa-envelope",
+        "className":"email",
+        "header": "Email:",
+        "text":"kimixsfood@email.com"
+     },
+     {
+        "id":4,
+        "icon":"fa-solid fa-phone",
+        "className":"phone",
+        "header": "Call:",
+        "text":"+1 5589 55488 55"
+     }
+]

@@ -1,0 +1,6 @@
+<div class="braon text-center">
+    <h3 class="pt-5 zuta">Tags</h3>
+<div *ngIf="tags" class="d-flex pt-4 flex-wrap justify-content-center">
+    <a class="text-secondary shadow" *ngFor="let tag of tags; let i=index" [class.active]="selectedIndex === i" (click)="setIndex(i)" routerLink="/tag/{{tag.name}}">{{tag.name}} ({{tag.count}})</a>
+</div>
+</div>

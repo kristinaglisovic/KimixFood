@@ -1,0 +1,220 @@
+[
+    {
+       "id":1,
+       "price" : {
+         "old" : 2.5,
+         "new" : 1.7
+       },
+       "name":"Sweet Donut",
+       "tags":[
+          "Chocolate",
+          "Donut"
+       ],
+       "imageUrl":"/assets/images/donuthut.png",
+       "cookingTime":"5-10",
+       "kcal":"210 - 300",
+       "new":false,
+       "ingredients":[
+          "Milk","Active dry yeast", "Eggs", "Butter","Sugar","Salt","Flour","Oil"
+       ]
+    },
+    {
+       "id":2,
+       "price" : {
+         "new" : 4.99
+       },
+       "name":"Donuts Hut",
+       "tags":[
+          "Honey",
+          "Donut"
+       ],
+       "imageUrl":"/assets/images/donuts-hut.png",
+       "cookingTime":"5-10",
+       "kcal":"300 - 400",
+       "new":true,
+       "ingredients":[
+         "Milk","Active dry yeast", "Eggs", "Butter","Sugar","Salt","Flour","Oil"
+      ]
+    },
+    {
+       "id":3,
+       "price" : {
+         "old" : 5,
+         "new" : 4.3
+       },
+       "name":"Eggs and Cheese",
+       "tags":[
+          "Eggs",
+          "Cheese"
+       ],
+       "imageUrl":"/assets/images/food-world.png",
+       "cookingTime":"5-10",
+       "kcal":"300 - 410",
+       "new":false,
+       "ingredients":[
+         "Bagel","Bacon", "Eggs", "Butter", "American cheese", "Salt", "Pepper"
+      ]
+    },
+    {
+       "id":4,
+       "price" : {
+         "new" : 4.73
+       },
+       "name":"Potato Meat",
+       "tags":[
+          "Meat",
+          "Vegetables"
+       ],
+       "imageUrl":"/assets/images/kuakata.png",
+       "cookingTime":"5-10",
+       "kcal":"200 - 400",
+       "new":false,
+       "ingredients":[
+         "Beef boneless sirloin","Vegetable oil","Garlic pepper", "Frozen potatoes", "Carrots", "Celery", "Onions","Beef gravy"
+      ]
+    },
+    {
+       "id":5,
+       "price" : {
+         "new" : 3.2
+       },
+       "name":"Shiny Candies",
+       "tags":[
+          "Candies"
+       ],
+       "imageUrl":"/assets/images/pizza-hub.png",
+       "cookingTime":"5-10",
+       "kcal":"100 - 200",
+       "new":true,
+       "ingredients":[
+         "White sugar","Corn syrup","Water", "Orange extract", "Green food coloring"
+      ]
+    },
+    {
+       "id":6,
+       "price" : {
+         "old" : 10,
+         "new" : 8.99
+       },
+       "name":"Paprika Specialty",
+       "tags":[
+          "Paprika"
+       ],
+       "imageUrl":"/assets/images/red-square.png",
+       "cookingTime":"5-10",
+       "kcal":"270 - 320",
+       "new":false,
+       "ingredients":[
+         "Onion","Dried Tarhonya","Paprika powder", "Smoked paprika powder", "Beef brot", "Parsley", "Oil"
+      ]
+    },
+    {
+       "id":7,
+       "name":"Meat",
+       "price" : {
+         "new" : 11
+       },
+       "tags":[
+          "Meat"
+       ],
+       "imageUrl":"/assets/images/ruby-tuesday.png",
+       "cookingTime":"5-10",
+       "kcal":"350 - 450",
+       "new":true,
+       "ingredients":[
+         "Butter","Garlic","Garlic powder", "Beef top sirloin steaks", "Salt", "Pepper"
+      ]
+    },
+    {
+       "id":8,
+       "price" : {
+         "old" : 8,
+         "new" : 7.33
+       },
+       "name":"Bacon Eggs",
+       "tags":[
+          "Meat",
+          "Eggs"
+       ],
+       "imageUrl":"/assets/images/taco-bell.png",
+       "cookingTime":"5-10",
+       "kcal":"200 - 330",
+       "new":false,
+       "ingredients":[
+         "Eggs","Bacon","Cherry tomatoes", "Parsley", "Salt", "Pepper"
+      ]
+    },
+    {
+       "id":9,
+       "price" : {
+         "old" : 5.8,
+         "new" : 5.32
+       },
+       "name":"Freshy Salad",
+       "tags":[
+          "Salad"
+       ],
+       "imageUrl":"/assets/images/discount-item-1.png",
+       "cookingTime":"5-10",
+       "kcal":"170 - 220",
+       "new":false,
+       "ingredients":[
+         "Cucumber","Tomatoes,","Onions", "Radishes", "Salt", "Lettuce leaves", "Carrots","Olive oil","Basil"
+      ]
+    },
+    {
+       "id":10,
+       "price" : {
+         "new" : 2.44
+       },
+       "name":"Macaroni",
+       "tags":[
+          "Pasta"
+       ],
+       "imageUrl":"/assets/images/discount-item-2.png",
+       "cookingTime":"5-10",
+       "kcal":"120 - 210",
+       "new":false,
+      
+       "ingredients":[
+         "Pasta macaroni","Tomato ketchup,","Pepper", "Onion", "Butter", "Cheddar cheese", "Chilli powder","Corn oil"
+      ]
+    },
+    {
+       "id":11,
+       "price" : {
+         "old" : 2.5,
+         "new" : 1.7
+       },
+       "name":"Paprika Soup",
+       "tags":[
+          "Paprika"
+       ],
+       "imageUrl":"/assets/images/discount-item-3.png",
+       "cookingTime":"5-10",
+       "kcal":"220 - 310",
+       "new":true,
+       
+       "ingredients":[
+         "Onion","Dried Tarhonya","Paprika powder", "Smoked paprika powder", "Beef brot", "Parsley", "Oil"
+      ]
+    },
+    {
+       "id":12,
+       "price" : {
+         "new" : 5.63
+       },
+       "name":"Fruit Mix Salad",
+       "tags":[
+          "Salad",
+          "Fruit"
+       ],
+       "imageUrl":"/assets/images/discount-item-4.png",
+       "cookingTime":"5-10",
+       "kcal":"230 - 356",
+       "new":true,
+       "ingredients":[
+         "Cucumber","Tomatoes,","Onions", "Radishes", "Salt", "Lettuce leaves", "Carrots","Olive oil","Basil"
+      ]
+    }
+ ]

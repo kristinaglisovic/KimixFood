@@ -1,0 +1,27 @@
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery braon py-5">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2 class="pb-5 zuta">Gallery</h2>
+          <p class="pb-5 zuta fw-bold">Some photos from Our Restaurant</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div *ngFor="let i of Images" class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a target="_blank" href="{{i.image.path}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{i.image.path}}" alt="{{i.image.alt}}" class="img-fluid">
+              </a>
+            </div>
+          </div>
+ 
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->

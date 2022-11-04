@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "fullName":"Walter White",
+        "title":"Master Chef",
+        "image":{
+            "path":"../../../assets/images/chefs/chefs-1.jpg",
+            "alt":"master chef"
+        }
+    },
+    {
+        "id":2,
+        "fullName":"Sarah Jhonson",
+        "title":"Patissier",
+        "image":{
+            "path":"../../../assets/images/chefs/chefs-2.jpg",
+            "alt":"patissier"
+        }
+    },
+    {
+        "id":3,
+        "fullName":"William Anderson",
+        "title":"Cook",
+        "image":{
+            "path":"../../../assets/images/chefs/chefs-3.jpg",
+            "alt":"cook"
+        }
+    }
+
+]

@@ -1,0 +1,36 @@
+
+                <div class="food-card box">
+
+                    <a routerLink="/food/{{food.id}}">
+                        <div class="food-card_img">
+                            <img src="{{food.imageUrl}}" alt="{{food.name}}">
+                        </div>
+                    </a>
+                    <div class="food-card_content">
+                        <div class="food-card_title-section">
+                            <span class="food-card_title text-white">{{food.name}}</span>
+                                
+                            <span *ngFor="let t of food.tags" class="tag m-1 p-1 zuta">{{t}}</span>
+
+                        </div>
+                        <div class="food-card_bottom-section">
+                            <div class="space-between">
+                                <div>
+                                    <span class="fa fa-fire narandzasta"></span><span class="text-white"> {{food.kcal}} Kcal </span>
+                                </div>
+                                <div *ngIf='food.new' class="pull-right">
+                                    <span class="bg-success text-warning badge font-weight-bold p-1">NEW</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="space-between">
+                                <div class="food-card_price">
+                                    <span class="text-warning">{{ food.price.new | currency}}   </span>
+                                    <span *ngIf="food.price.old" class="text-decoration-line-through staraCena">{{ food.price.old |currency }}</span>
+                                </div>
+                                <a routerLink="/food/{{food.id}}" class="btn btn-warning fw-bold">Order Me</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>

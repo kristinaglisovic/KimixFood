@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "firstName":"Kristina",
+        "lastName":"Glisovic",
+        "username":"kimaaa",
+        "email":"kimakontakt@gmail.com"
+    },
+    {
+        "id":2,
+        "firstName":"Pera",
+        "lastName":"Peric",
+        "username":"perica",
+        "email":"perakontakt@gmail.com"
+    },
+    {
+        "id":3,
+        "firstName":"Mina",
+        "lastName":"Mikic",
+        "username":"mikica",
+        "email":"mikakontakt@gmail.com"
+    }
+
+]

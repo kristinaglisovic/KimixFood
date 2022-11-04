@@ -1,0 +1,72 @@
+<button type="button" class="btn btn-warning my-3" data-bs-toggle="modal" data-bs-target="#ModalForm">
+    Pay me
+  </button>
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close btn-warning btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <form [formGroup]="paymentForm" class="php-email-form" (ngSubmit)="onSubmit()">
+            <div class="myform">
+                <h1 class="text-center text-dark py-3">Payment Details</h1>
+                <div class="card px-4">
+                     
+                    <div class="row gx-3">
+                        <div class="col-12 pt-2">
+                            <div class="d-flex flex-column">
+                                <p class="text  text-darkmb-1">Person Name</p>
+                                <input class="form-control mb-1" type="text" placeholder="Name" formControlName="name">
+                                <ng-container *ngIf="(f['name'].touched && f['name'].invalid)">
+                                    <span *ngIf="f['name'].hasError('required')" class="text-danger">Name is required</span>
+                                    <span *ngIf="f['name'].hasError('pattern')" class="text-danger">Name can contain 2-35 letters or spec. characters</span>
+                                  </ng-container>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">Card Number</p>
+                                <input class="form-control mb-1" type="text" placeholder="1234 5678 4356 1234" formControlName="cnumber">
+                                <ng-container *ngIf="(f['cnumber'].touched && f['cnumber'].invalid)">
+                                    <span *ngIf="f['cnumber'].hasError('required')" class="text-danger">Card number is required</span>
+                                    <span *ngIf="f['cnumber'].hasError('pattern')" class="text-danger">Card number must have 16 digits</span>
+                                  </ng-container>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">Expiry</p>
+                                <input class="form-control mb-1" type="text" placeholder="mmyy or mmyyyy" formControlName="expiry">
+                                <ng-container *ngIf="(f['expiry'].touched && f['expiry'].invalid)">
+                                    <span *ngIf="f['expiry'].hasError('required')" class="text-danger pb-2">Expiry is required</span>
+                                    <span *ngIf="f['expiry'].hasError('pattern')" class="text-danger pb-2">Invalid expiry number format: mmyy or mmyyyy</span>
+                                  </ng-container>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">CVV/CVC</p>
+                                <input class="form-control mb-1" type="password" placeholder="*** or ****" formControlName="cvc">
+                                <ng-container *ngIf="(f['cvc'].touched && f['cvc'].invalid)">
+                                    <span *ngIf="f['cvc'].hasError('required')" class="text-danger pb-2">CVV/CVC is required</span>
+                                    <span *ngIf="f['cvc'].hasError('pattern')" class="text-danger pb-2">Invalid CVV/CVC format: Must be a number</span>
+                                  </ng-container>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                          
+                                <button class="uplati btn btn-primary mb-3 ps-3" [disabled]="paymentForm.invalid">Pay<span class="fas fa-arrow-right"></span></button>
+                              
+                        
+                            <div *ngIf="submitted" class="my-3 text-center">
+                                <div class="sent-message text-primary">Payment accepted</div>
+                              </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
